@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- 세로 3등분 1층 -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="#4CAF50"
+        >
+        <Button
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="버튼 1"
+            android:backgroundTint="#888"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <Button
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="버튼1"
+            />
+        <Button
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="버튼 1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+    </LinearLayout>
+
+    <!-- 세로 3등분 2층 -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="#8BC34A"
+        >
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="버튼"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="버튼"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 세로 3등분 3층 -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="#C944E0"
+        >
+        <!-- 가로 3등분 -->
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="버튼"
+            />
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="버튼"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="버튼"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="버튼"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="버튼"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+        </LinearLayout>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#D3D3D3"
+            android:text="버튼"
+            android:textColor="#111"
+            />
+    </LinearLayout>
+
+</LinearLayout>
