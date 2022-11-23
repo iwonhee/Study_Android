@@ -11,6 +11,6 @@
     <!-- 앱의 메인 컬러 : 카카오톡(노랑), ... -->
     <!-- 여기서 색(#...)을 바꾸면 이걸 쓴 모든 액티비티에 적용 -->
     <!-- #4BA4FE -->
-    <color name="kwh_app">#990011</color>
+    <color name="kwh_app">#4BA4FE</color>
 
 </resources>

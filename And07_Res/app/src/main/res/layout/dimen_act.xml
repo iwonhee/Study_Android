@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="@dimen/tv_notice_width"
+        android:layout_height="@dimen/tv_notice_height"
+        android:background="@color/tv_notice_bg"
+        />
+    <TextView
+        style="@style/tv_notice_style"
+        android:text="Notice"
+        />
+    <TextView
+        style="@style/tv_notice_style2"
+        android:text="Notice"
+        />
+
+</LinearLayout>

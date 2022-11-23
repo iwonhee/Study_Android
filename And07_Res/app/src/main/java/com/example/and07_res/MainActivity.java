@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kwh_act); // java - layout 연결
+        setContentView(R.layout.kakao_act); // java - layout 연결
 
         Log.d(TAG, "리소스 값 : "+ R.string.app_version); // 숫자
         Log.d(TAG, "리소스 값 : "+ getString(R.string.app_version)); // 숫자

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tv_notice_width">100dp</dimen>
+    <dimen name="tv_notice_height">150dp</dimen>
+    <color name="tv_notice_bg">#FFEB3B</color>
+
+    <style name="tv_notice_style">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:background">#FFEB3B</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="tv_notice_style2" parent="tv_notice_style">
+        <item name="android:background">#4BA4FE</item>
+    </style>
+
+</resources>

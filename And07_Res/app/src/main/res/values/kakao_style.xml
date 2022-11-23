@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ALL TEXT -->
+    <style name="kakao_all_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#000</item>
+    </style>
+    <!-- Text 친구/이름 -->
+    <style name="kakao_name" parent="kakao_all_text">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">#000</item>
+    </style>
+    <!-- Text 친구/상태메세지 -->
+    <style name="kakao_pm" parent="kakao_all_text">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#888</item>
+    </style>
+    <!-- Text 친구/프사 -->
+    <style name="kakao_pp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#FFBB86FC</item>
+    </style>
+
+    <!-- Relativelayout 친구/이름,메세지 -->
+    <style name="kakao_rel1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+    <!-- Relativelayout 친구 프로필 전체 -->
+    <style name="kakao_rel_friend">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <!-- 카드뷰 60dp -->
+    <style name="kakao_card60">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="cardCornerRadius">100dp</item>
+    </style>
+</resources>
