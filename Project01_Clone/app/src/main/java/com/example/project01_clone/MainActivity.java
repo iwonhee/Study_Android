@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.project01_clone.chat.ChatFragment;
 import com.example.project01_clone.friendlist.FriendFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }else if(item.getItemId() == R.id.btm_item2){
                     actionBar.setTitle("채팅");
+
+                    changeFragment(new ChatFragment());
 
                 }else if(item.getItemId() == R.id.btm_item3){
                     actionBar.setTitle("뷰");

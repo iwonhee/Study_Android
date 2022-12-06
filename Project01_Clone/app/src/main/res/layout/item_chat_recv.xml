@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/lin_chat_item"
+    >
+
+    <ImageView
+        android:id="@+id/iv_chat"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/profile_img1"
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tv_chat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="채팅방 이름"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tv_chat_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마지막 메세지"
+            android:textSize="18dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오후 12:25"
+        android:layout_margin="10dp"
+        />
+
+</LinearLayout>

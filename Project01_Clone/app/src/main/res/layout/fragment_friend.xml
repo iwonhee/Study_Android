@@ -1,78 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".friendlist.FriendFragment"
     android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/banner2"
-        android:scaleType="fitCenter"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        />
-
+    <!--
+       스크롤뷰는 하나의 자식요소만 가질 수 있음!
+    -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_margin="10dp"
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:src="@drawable/profile_img1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/banner2"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             />
 
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
+            android:orientation="horizontal"
+            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="이름"
-                android:textSize="20dp"
-                android:textColor="@color/black"
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:src="@drawable/profile_img1"
                 />
-            <TextView
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="메세지"
-                android:textSize="14dp"
-                />
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이름"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메세지"
+                    android:textSize="14dp"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d6d6d6"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="친구 899"
+            android:layout_margin="10dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv_friend_frag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="10dp"/>
+
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#d6d6d6"
-        android:layout_margin="10dp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="친구 899"
-        android:layout_margin="10dp"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recv_friend_frag"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="10dp"/>
-
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>
