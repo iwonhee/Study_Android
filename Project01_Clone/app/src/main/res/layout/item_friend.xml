@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_friend_profile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/profile_img3" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_friend_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="친구 이름"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:id="@+id/tv_friend_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="친구 상태 메세지"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.example.and11_allview.gridv.Adapter_Grid;
 import com.example.and11_allview.gridv.GridFragment;
+import com.example.and11_allview.human.HumanFragment;
 import com.example.and11_allview.listfrag.Frag_Adapter;
 import com.example.and11_allview.listfrag.ListFragment;
 import com.example.and11_allview.recycler.RecyclerFragment;
@@ -19,6 +20,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     Button btn_sub, btn_list, btn_grid, btn_recycler, btn_melon;
+    // 2인구현 버튼 (임시)
+    Button btn_human;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
         btn_grid = findViewById(R.id.btn_grid);     //그리드뷰 버튼
         btn_recycler = findViewById(R.id.btn_recycler);     //리사이클러 버튼
         btn_melon = findViewById(R.id.btn_melon);
+        btn_human = findViewById(R.id.btn_human);
+
+        // 리사이클러뷰 - 2인구현
+        btn_human.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, new HumanFragment()).commit();
+            }
+        });
 
         // 리사이클러뷰 - 직접구현
         btn_melon.setOnClickListener(new View.OnClickListener() {

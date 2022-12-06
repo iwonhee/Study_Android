@@ -55,6 +55,12 @@
             android:text="리사이클러뷰 직접구현"
             android:backgroundTint="#9C27B0"/>
 
+        <Button
+            android:text="human"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_human"
+            />
 
     </LinearLayout>
 

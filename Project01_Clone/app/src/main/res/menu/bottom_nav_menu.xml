@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+        showAsAction : 보이는 설정
+         - always : 항상 보이게
+         - never : 안보이게
+         - ifRoom : 공간 있을때 보이게
+    -->
+
+    <item
+        android:id="@+id/btm_item1"
+        android:icon="@drawable/user"
+        android:enabled="true"
+        android:title="1"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/btm_item2"
+        android:icon="@drawable/talk"
+        android:enabled="true"
+        android:title="1"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/btm_item3"
+        android:icon="@drawable/eye"
+        android:enabled="true"
+        android:title="1"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/btm_item4"
+        android:icon="@drawable/shopping"
+        android:enabled="true"
+        android:title="1"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/btm_item5"
+        android:icon="@drawable/etc"
+        android:enabled="true"
+        android:title="1"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

@@ -30,10 +30,12 @@ public class MelonAdapter extends RecyclerView.Adapter<MelonAdapter.ViewHolder> 
         return viewHolder;
     }
 
-    //이벤트 처리
+    //
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
         h.iv_main.setImageResource(list.get(i).iv_main);
+        h.tv_title.setText(list.get(i).tv_title);
+        h.tv_sub.setText(list.get(i).tv_sub);
     }
 
     @Override
@@ -57,12 +59,10 @@ public class MelonAdapter extends RecyclerView.Adapter<MelonAdapter.ViewHolder> 
         TextView tv_title, tv_sub;
         public ViewHolder(@NonNull View v) {
             super(v);
+            // item id 초기화
             iv_main = v.findViewById(R.id.iv_main);
             tv_title = v.findViewById(R.id.tv_title);
             tv_sub = v.findViewById(R.id.tv_sub);
-
-
-//            iv_main.setImageResource(list.get(getItemId()).iv_main);
 
         }
     }
