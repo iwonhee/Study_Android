@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.project01_clone.chat.ChatFragment;
+import com.example.project01_clone.external.ExternalFragment;
 import com.example.project01_clone.friendlist.FriendFragment;
+import com.example.project01_clone.view.ViewFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,19 +34,19 @@ public class MainActivity extends AppCompatActivity {
 
                 if(item.getItemId() == R.id.btm_item1){
                     actionBar.setTitle("친구");
-
                     changeFragment(new FriendFragment());
 
                 }else if(item.getItemId() == R.id.btm_item2){
                     actionBar.setTitle("채팅");
-
                     changeFragment(new ChatFragment());
 
                 }else if(item.getItemId() == R.id.btm_item3){
                     actionBar.setTitle("뷰");
+                    changeFragment(new ViewFragment());
 
                 }else if(item.getItemId() == R.id.btm_item4){
                     actionBar.setTitle("쇼핑");
+                    changeFragment(new ExternalFragment());
 
                 }else if(item.getItemId() == R.id.btm_item5){
                     actionBar.setTitle("더보기");

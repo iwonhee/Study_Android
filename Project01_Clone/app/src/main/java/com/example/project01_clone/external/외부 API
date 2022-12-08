@@ -1,0 +1,15 @@
+Build Tool : Maven, Gradle(우세)
+빌드 도구 : 해당하는 어플리케이션(웹,앱)이 빌드될때 필요한 모든것들을 모아 놓은것.
+maven : pom.xml
+
+gradle : build.gradle -> ( Module, Project )
+dependencies { implementation '...' } 붙여넣기
+※ 추가 후에는 반드시 sync now 를 해줘야함( 이때 다운로드 시작 ) -> 에디터 화면 우측상단에서 확인
+
+
+1. CircleImageView : 이미지를 동그랗게 보이기 위한 API
+
+2. Glide : 외부에 있는 이미지 (URL) 또는 gif 로 재생이 되는 이미지 등을 쉽게 이미지뷰와 연결하는 API
+  ※ 외부이미지 가져오려면 manifests 에서 INTERNET 권한을 줘야함
+  <uses-permission android:name="android.permission.INTERNET"/>
+

@@ -58,7 +58,6 @@ public class ChatActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 //before?
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // CharSequence(입력된값)이 있을때만 전송 버튼 보이게
@@ -68,7 +67,6 @@ public class ChatActivity extends AppCompatActivity {
                 }else{
                     tv_chat_tag.setVisibility(View.GONE);
                     iv_chat_send.setVisibility(View.VISIBLE);
-
                 }
             }
             @Override
