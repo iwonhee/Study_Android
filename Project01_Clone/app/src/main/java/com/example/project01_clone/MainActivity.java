@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     actionBar.setTitle("친구");
                     changeFragment(new FriendFragment());
 
+
                 }else if(item.getItemId() == R.id.btm_item2){
                     actionBar.setTitle("채팅");
                     changeFragment(new ChatFragment());

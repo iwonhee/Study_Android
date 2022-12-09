@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/bg_light"
+
+    android:paddingTop="5dp">
+
+    <!-- 상단 메뉴 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/b_menu"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/b_basket"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+        
+    </RelativeLayout>
+
+    <!-- MAIN CONTENT -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <!-- 멤버십 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/membership"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                />
+            <!-- 이미지 슬라이드 구간 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_home_slide1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- 킹오더/딜리버리 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                >
+                <!-- 킹오더 버튼 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/icon_red"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/red_inside"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        />
+                </androidx.cardview.widget.CardView>
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"/>
+                <!-- 딜리버리 버튼 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/icon_green"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/green_inside"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:padding="15dp"
+                        />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="It's NEW"
+                android:textSize="24dp"
+                android:fontFamily="@font/one_mobile"
+                android:textColor="@color/font_braun"
+                android:paddingLeft="15dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="5dp"
+                />
+            <!-- New Burgers -->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recv_home_new"
+                    />
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout> <!-- MAIN CONTENT -->
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <!-- bottom nav -->
+    <LinearLayout
+        android:id="@+id/lin_home_nav"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+
+        <!-- nav item1 : Home -->
+        <LinearLayout
+            android:id="@+id/lin_btm_item1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/iv_nav_home"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_home"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="홈"
+                android:fontFamily="@font/one_mobile"
+                android:textColor="@color/font_braun"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                />
+
+        </LinearLayout>
+
+        <!-- nav item2 : Coupon -->
+        <LinearLayout
+            android:id="@+id/lin_btm_item2"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/iv_nav_coupon"
+                android:layout_marginTop="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_coupon"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="쿠폰"
+                android:fontFamily="@font/one_mobile"
+                android:textColor="@color/font_braun"
+                android:textAlignment="center"
+                android:layout_marginTop="6dp"
+                />
+
+        </LinearLayout>
+
+        <!-- 주문 버튼 -->
+        <RelativeLayout
+            android:id="@+id/rel_btm_item3"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="0dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/font_braun"
+                >
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:backgroundTint="@color/font_braun"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                />
+            <ImageView
+                android:id="@+id/iv_nav_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_order"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                />
+        </RelativeLayout>
+
+        <!-- nav item4 : myking -->
+        <LinearLayout
+            android:id="@+id/lin_btm_item4"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/iv_nav_myking"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_myking"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="쿠폰"
+                android:fontFamily="@font/one_mobile"
+                android:textColor="@color/font_braun"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                />
+
+        </LinearLayout>
+
+        <!-- nav item5 : more -->
+        <LinearLayout
+            android:id="@+id/lin_btm_item5"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/iv_nav_more"
+                android:layout_marginTop="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_more"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="쿠폰"
+                android:fontFamily="@font/one_mobile"
+                android:textColor="@color/font_braun"
+                android:textAlignment="center"
+                android:layout_marginTop="14dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
