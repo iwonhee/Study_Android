@@ -1,4 +1,4 @@
-package com.example.project_burgerking;
+package com.example.project_burgerking.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_burgerking.DTO.HomeBurgerDTO;
+import com.example.project_burgerking.R;
 
 import java.util.ArrayList;
 

@@ -1,14 +1,12 @@
 package com.example.project_burgerking;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
-import android.content.ClipData;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,16 +14,19 @@ import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.project_burgerking.DTO.HomeBurgerDTO;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.project_burgerking.adapter.HomeBurgerAdapter;
+import com.example.project_burgerking.adapter.HomeViewPagerAdapter;
+import com.example.project_burgerking.membership.MemberActivity;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     ImageView iv_home_slide1, iv_nav_home, iv_nav_coupon, iv_nav_order, iv_nav_myking, iv_nav_more;
+    ImageView iv_membership;
     RecyclerView recv_home_new;
     LinearLayout lin_btm_item1, lin_btm_item2, lin_btm_item4, lin_btm_item5;
     RelativeLayout rel_btm_item3;
-
+    ViewPager viewpager_home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         iv_nav_order = findViewById(R.id.iv_nav_order);
         iv_nav_myking = findViewById(R.id.iv_nav_myking);
         iv_nav_more = findViewById(R.id.iv_nav_more);
+        iv_membership = findViewById(R.id.iv_membership);
 
         lin_btm_item1 = findViewById(R.id.lin_btm_item1);
         lin_btm_item2 = findViewById(R.id.lin_btm_item2);
@@ -46,10 +48,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lin_btm_item4 = findViewById(R.id.lin_btm_item4);
         lin_btm_item5 = findViewById(R.id.lin_btm_item5);
 
+        viewpager_home = findViewById(R.id.viewpager_home);
+
         iv_nav_home.setImageResource(R.drawable.nav_home_r);    //기본 홈화면 select
 
+        // 멤버십화면
+        iv_membership.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MemberActivity.class);
+                startActivity(intent);
+            }
+        });
 
-
+        viewpager_home.setAdapter(new HomeViewPagerAdapter(this, getLayoutInflater()));
         // Main Slide
         iv_home_slide1 = findViewById(R.id.iv_home_slide1);
         Glide.with(this).load("https://d1cua0vf0mkpiy.cloudfront.net/images/web/banner/5364f790-a064-42a2-9bbc-6972e053ad83.png")

@@ -8,9 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- custom -->
     <color name="bg_light">#F5EBDD</color>
     <color name="font_braun">#512215</color>
     <color name="burger">#FF8633</color>
     <color name="icon_red">#D72301</color>
     <color name="icon_green">#198738</color>
+    <color name="bg_middle">#EADCCB</color>
+    <color name="bg_text_light">#FCF5F0</color>
+    <color name="font_unselected">#9E8070</color>
 </resources>

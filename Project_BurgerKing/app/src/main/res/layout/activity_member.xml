@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".membership.MemberActivity"
+    android:orientation="vertical"
+    android:background="@color/bg_light">
+
+    <!-- 상단바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_member_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="멤버십"
+            android:textColor="@color/font_braun"
+            android:textSize="22dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/one_mobile"
+            />
+
+    </RelativeLayout>
+
+    <!-- Scroll Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- profile -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:cardElevation="0dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_membership_rank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/m_tag"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/tv_member_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="테스트"
+                            android:fontFamily="@font/one_mobile"
+                            android:textSize="20dp"
+                            android:textColor="@color/font_braun"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/iv_membership_rank"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="님"
+                            android:fontFamily="@font/one_mobile"
+                            android:textSize="16dp"
+                            android:textColor="@color/font_braun"
+                            android:layout_alignBaseline="@+id/tv_member_name"
+                            android:layout_toRightOf="@+id/tv_member_name"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WHOPPER"
+                            android:fontFamily="@font/one_mobile"
+                            android:textSize="20dp"
+                            android:textColor="@color/font_braun"
+                            android:textStyle="bold"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/m_main"
+                        android:padding="10dp"
+                        />
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- coupon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="멤버십 쿠폰"
+                    android:fontFamily="@font/one_mobile"
+                    android:textSize="22dp"
+                    android:textColor="@color/font_braun"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/m_coupon_w1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/m_coupon_w2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_coupon_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="더 많은 쿠폰 보기"
+                        android:fontFamily="@font/one_mobile"
+                        android:textSize="16dp"
+                        android:textColor="@color/font_braun"
+                        android:textAlignment="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        />
+                    <View
+                        android:layout_width="105dp"
+                        android:layout_height="3dp"
+                        android:background="@color/font_braun"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@+id/tv_coupon_more"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!-- rank -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="멤버십 등급별 혜택"
+                android:fontFamily="@font/one_mobile"
+                android:textSize="22dp"
+                android:textColor="@color/font_braun"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:layout_margin="10dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/bg_middle">
+
+                        <View
+                            android:layout_width="7dp"
+                            android:layout_height="wrap_content"/>
+
+                        <!-- tab1 : welcome -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_member_welcome"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginTop="5dp"
+                            app:cardBackgroundColor="@color/bg_middle"
+                            app:cardElevation="0dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_select_welcome"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/font_unselected"
+                                    android:text="WELCOME"
+                                    android:fontFamily="@font/one_mobile"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:paddingTop="15dp"
+                                    />
+                                <View
+                                    android:id="@+id/v_rank_welcome"
+                                    android:layout_width="80dp"
+                                    android:layout_height="2dp"
+                                    android:background="@color/font_braun"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="25dp"
+                                    android:layout_below="@+id/tv_select_welcome"
+                                    android:layout_centerHorizontal="true"
+                                    android:visibility="invisible"
+                                    />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- tab2 : JUNIOR -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_member_junior"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="@color/bg_middle"
+                            android:layout_marginTop="5dp"
+                            app:cardElevation="0dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_select_junior"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/font_unselected"
+                                    android:text="JUNIOR"
+                                    android:fontFamily="@font/one_mobile"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:paddingTop="15dp"
+                                    />
+                                <View
+                                    android:id="@+id/v_rank_junior"
+                                    android:layout_width="80dp"
+                                    android:layout_height="2dp"
+                                    android:background="@color/font_braun"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="25dp"
+                                    android:layout_below="@+id/tv_select_junior"
+                                    android:layout_centerHorizontal="true"
+                                    android:visibility="invisible"
+                                    />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- tab3 : WHOPPER -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_member_whopper"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="@color/white"
+                            android:layout_marginTop="5dp"
+                            app:cardElevation="0dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_select_whopper"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/font_braun"
+                                    android:text="WHOPPER"
+                                    android:fontFamily="@font/one_mobile"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:paddingTop="15dp"
+                                    />
+                                <View
+                                    android:id="@+id/v_rank_whopper"
+                                    android:layout_width="80dp"
+                                    android:layout_height="2dp"
+                                    android:background="@color/font_braun"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="25dp"
+                                    android:layout_below="@+id/tv_select_whopper"
+                                    android:layout_centerHorizontal="true"
+                                    />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- tab4 : KING -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_member_king"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="@color/bg_middle"
+                            android:layout_marginTop="5dp"
+                            app:cardElevation="0dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_select_king"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/font_unselected"
+                                    android:text="KING"
+                                    android:fontFamily="@font/one_mobile"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:paddingTop="15dp"
+                                    />
+                                <View
+                                    android:id="@+id/v_rank_king"
+                                    android:layout_width="50dp"
+                                    android:layout_height="2dp"
+                                    android:background="@color/font_braun"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="25dp"
+                                    android:layout_below="@+id/tv_select_king"
+                                    android:layout_centerHorizontal="true"
+                                    android:visibility="invisible"
+                                    />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <View
+                            android:layout_width="7dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>  <!-- 선택버튼 끝 -->
+
+                    <!-- 해당 등급별 혜택 -->
+                    <FrameLayout
+                        android:layout_marginTop="55dp"
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_member_rank_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/m_rank_welcome"
+                            android:paddingTop="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="30dp"
+                            android:background="@color/white"
+                            />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

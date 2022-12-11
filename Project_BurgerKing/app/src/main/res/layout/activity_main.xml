@@ -55,6 +55,7 @@
             >
             <!-- 멤버십 -->
             <ImageView
+                android:id="@+id/iv_membership"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/membership"
@@ -67,7 +68,13 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
                 android:layout_margin="10dp"
+                app:cardElevation="0dp"
                 >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
                 <ImageView
                     android:id="@+id/iv_home_slide1"
