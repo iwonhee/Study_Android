@@ -293,7 +293,7 @@
                                     />
                                 <View
                                     android:id="@+id/v_rank_junior"
-                                    android:layout_width="80dp"
+                                    android:layout_width="60dp"
                                     android:layout_height="2dp"
                                     android:background="@color/font_braun"
                                     android:layout_marginTop="5dp"

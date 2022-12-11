@@ -4,14 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.project_burgerking.MainActivity;
 import com.example.project_burgerking.R;
 
-public class MemberActivity extends AppCompatActivity {
+public class MemberActivity extends AppCompatActivity{
     ImageView iv_member_rank_detail, iv_member_back;
     CardView card_member_welcome, card_member_junior, card_member_whopper, card_member_king;
     TextView tv_select_welcome, tv_select_junior, tv_select_whopper, tv_select_king;
@@ -81,11 +83,19 @@ public class MemberActivity extends AppCompatActivity {
                 selectRank(iv_member_rank_detail, card_member_king, tv_select_king, v_rank_king);
             }
         });
-        
+
+        iv_member_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MemberActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 //        getSupportFragmentManager().beginTransaction().replace(R.id.container, new MembershipFragment()).commit();
 
-    }
+    }// onCreate()
+
 
     // 탭 선택
     public void selectRank(ImageView detail, CardView cardview, TextView title, View underline){
@@ -103,6 +113,7 @@ public class MemberActivity extends AppCompatActivity {
         underline.setVisibility(View.VISIBLE);
     }
     // 나머지 탭 선택 해제
+
     public  void unselectCard(CardView[] cards, TextView[] texts, View[] views) {
         for (int i = 0; i < cards.length; i++){
             cards[i].setCardBackgroundColor(getResources().getColor(R.color.bg_middle));
@@ -110,5 +121,4 @@ public class MemberActivity extends AppCompatActivity {
             views[i].setVisibility(View.INVISIBLE);
         }
     }
-
 }
