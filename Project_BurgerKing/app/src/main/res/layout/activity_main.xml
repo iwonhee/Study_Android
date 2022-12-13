@@ -7,7 +7,6 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="@color/bg_light"
-
     android:paddingTop="5dp">
 
     <!-- 상단 메뉴 -->
@@ -31,22 +30,43 @@
             android:src="@drawable/logo"
             android:layout_centerHorizontal="true"
             />
-        <ImageView
+        <RelativeLayout
+            android:id="@+id/rel_basket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/b_basket"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            />
-        
+            >
+
+            <ImageView
+                android:id="@+id/iv_home_basket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b_basket"
+                />
+
+            <ImageView
+                android:id="@+id/iv_home_basket_number"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="14dp"
+                android:src="@drawable/basket1"
+                android:visibility="invisible"
+                />
+
+        </RelativeLayout>
+
     </RelativeLayout>
 
+    <!-- 대공사필요..
+     fragment ?
+     frame ??
+     -->
     <!-- MAIN CONTENT -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginBottom="20dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,16 +91,10 @@
                 app:cardElevation="0dp"
                 >
 
-                <androidx.viewpager.widget.ViewPager
+                <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewpager_home"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <ImageView
-                    android:id="@+id/iv_home_slide1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="374dp"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -283,7 +297,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="쿠폰"
+                android:text="MY킹"
                 android:fontFamily="@font/one_mobile"
                 android:textColor="@color/font_braun"
                 android:textAlignment="center"
@@ -314,7 +328,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="쿠폰"
+                android:text="더보기"
                 android:fontFamily="@font/one_mobile"
                 android:textColor="@color/font_braun"
                 android:textAlignment="center"
