@@ -42,6 +42,13 @@ public class MainFragment extends Fragment {
             }
         });
 
+        b.ivLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         //뷰페이저 이미지 List
         ArrayList<Integer> slideList = new ArrayList<>();
         slideList.add(R.drawable.home_slide1);

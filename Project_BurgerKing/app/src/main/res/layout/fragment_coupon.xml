@@ -35,55 +35,147 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!-- 사용가능 쿠폰 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/coupon_fill1"
+            android:layout_gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사용가능 멤버십"
+                android:textColor="@color/font_braun"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 쿠폰 1개"
+                android:textStyle="bold"
+                android:textColor="@color/font_braun"
+                android:textSize="16dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- TAB -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <!-- tab1 : 매장용 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_coupon_tab1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="매장용"
+                android:textAlignment="center"
+                android:textColor="@color/icon_red"
+                android:fontFamily="@font/one_mobile"
+                android:textSize="16dp"
+                android:layout_centerInParent="true"
+                />
+            <View
+                android:id="@+id/v_coupon_underline1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/icon_red"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab2 : 킹오더용 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_coupon_tab2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="킹오더용"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:fontFamily="@font/one_mobile"
+                android:textSize="16dp"
+                android:layout_centerInParent="true"
+                />
+            <View
+                android:id="@+id/v_coupon_underline2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab3 : 딜리버리용 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_coupon_tab3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="딜리버리용"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:fontFamily="@font/one_mobile"
+                android:textSize="16dp"
+                android:layout_centerInParent="true"
+                />
+            <View
+                android:id="@+id/v_coupon_underline3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         >
 
-        <LinearLayout
+        <!-- ChildFragment coupons -->
+        <FrameLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-            <!-- 사용가능 쿠폰 -->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/coupon_fill1"
-                android:layout_gravity="center"
-                />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="사용가능 멤버십"
-                    android:textColor="@color/font_braun"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" 쿠폰 1개"
-                    android:textStyle="bold"
-                    android:textColor="@color/font_braun"
-                    android:textSize="16dp"
-                    />
-
-            </LinearLayout>
-
-
-
-        </LinearLayout> <!-- content -->
+            />
 
     </androidx.core.widget.NestedScrollView>
 

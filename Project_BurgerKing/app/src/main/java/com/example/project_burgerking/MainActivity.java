@@ -43,7 +43,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b.ivNavHome.setImageResource(R.drawable.nav_home_r);  //기본 홈화면 select
 
 
-        // 바텀내비 아이템 : lin_btm_item1
+        // 바텀 내비 '주문' 클릭
+        b.relBtmItem3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.orderContainer.setVisibility(View.VISIBLE);
+            }
+        });
+        // 검은화면 사라지게
+        b.orderContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.orderContainer.setVisibility(View.GONE);
+            }
+        });
 
         // 홈 클릭시
         b.linBtmItem1.setOnClickListener(new View.OnClickListener() {
