@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".OrderActivity"
+    android:orientation="vertical"
+    android:background="@color/bg_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주변 매장 검색"
+            android:fontFamily="@font/one_mobile"
+            android:textColor="@color/font_braun"
+            android:textSize="22dp"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <!-- TAB -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <!-- tab1 : 킹오더 -->
+        <RelativeLayout
+            android:id="@+id/rel_search_tab1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv_search_tab1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/cookierun_bold"
+                android:text="킹오더"
+                android:textAlignment="center"
+                android:textColor="@color/icon_red"
+                android:textSize="18dp" />
+            <View
+                android:id="@+id/v_search_underline1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/icon_red"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab2 : 드라이브스루 -->
+        <RelativeLayout
+            android:id="@+id/rel_search_tab2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_search_tab2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="드라이브스루"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:fontFamily="@font/cookierun_bold"
+                android:textSize="18dp"
+                android:layout_centerInParent="true"
+                />
+            <View
+                android:id="@+id/v_search_underline2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        />
+
+
+
+
+</LinearLayout>

@@ -91,17 +91,17 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             >
+
             <TextView
                 android:id="@+id/tv_coupon_tab1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
                 android:text="매장용"
                 android:textAlignment="center"
                 android:textColor="@color/icon_red"
-                android:fontFamily="@font/one_mobile"
-                android:textSize="16dp"
-                android:layout_centerInParent="true"
-                />
+                android:textSize="16dp" />
             <View
                 android:id="@+id/v_coupon_underline1"
                 android:layout_width="match_parent"

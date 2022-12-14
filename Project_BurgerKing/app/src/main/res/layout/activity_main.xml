@@ -187,6 +187,7 @@
             >
             <!-- 킹오더 버튼 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_kingOrder"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
@@ -206,6 +207,7 @@
                 android:layout_height="wrap_content"/>
             <!-- 딜리버리 버튼 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_delivery"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
@@ -257,6 +259,16 @@
             android:src="@drawable/nav_order"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
+            android:visibility="visible"
+            />
+        <ImageView
+            android:id="@+id/iv_nav_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_close"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:visibility="gone"
             />
     </RelativeLayout>
 

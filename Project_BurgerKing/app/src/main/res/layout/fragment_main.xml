@@ -109,6 +109,7 @@
                 >
                 <!-- 킹오더 버튼 -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_kingOrder"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
@@ -128,6 +129,7 @@
                     android:layout_height="wrap_content"/>
                 <!-- 딜리버리 버튼 -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_delivery"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="100dp"

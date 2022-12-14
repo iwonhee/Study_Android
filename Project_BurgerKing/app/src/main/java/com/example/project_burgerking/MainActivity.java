@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 b.orderContainer.setVisibility(View.VISIBLE);
+                b.ivNavOrder.setVisibility(View.GONE);
+                b.ivNavClose.setVisibility(View.VISIBLE);
             }
         });
         // 검은화면 사라지게
@@ -55,6 +57,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 b.orderContainer.setVisibility(View.GONE);
+                b.ivNavClose.setVisibility(View.GONE);
+                b.ivNavOrder.setVisibility(View.VISIBLE);
+            }
+        });
+        b.ivNavClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b.orderContainer.setVisibility(View.GONE);
+                b.ivNavClose.setVisibility(View.GONE);
+                b.ivNavOrder.setVisibility(View.VISIBLE);
+            }
+        });
+
+        // 킹오더 클릭
+        b.cardKingOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -81,7 +102,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-
+        // MY킹 클릭 : 임시 로그인
+        b.linBtmItem4.setOnClickListener(this);
 
     }// onCreate()
 
@@ -89,7 +111,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
+        // MY킹 클릭 : 임시 로그인 페이지 이동
+        if(v.getId() == R.id.lin_btm_item4){
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
     }// onClick()
 
     //나머지 내비 아이콘 이미지 바꾸기

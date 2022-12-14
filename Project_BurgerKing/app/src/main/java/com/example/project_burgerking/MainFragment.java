@@ -49,6 +49,15 @@ public class MainFragment extends Fragment {
             }
         });
 
+        // 킹오더 클릭
+        b.cardKingOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, OrderActivity.class);
+                startActivity(intent);
+            }
+        });
+
         //뷰페이저 이미지 List
         ArrayList<Integer> slideList = new ArrayList<>();
         slideList.add(R.drawable.home_slide1);

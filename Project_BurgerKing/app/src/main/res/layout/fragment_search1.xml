@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".kingOrder.Search1Fragment"
+    android:background="@color/bg_light"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        >
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_kingOrder_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/font_braun"
+        android:layout_marginBottom="15dp"
+        android:bufferType="spannable"
+        android:fontFamily="@font/cookierun_regular"
+        />
+    <TextView
+        android:id="@+id/tv_searchCnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:bufferType="spannable"
+        android:textColor="@color/font_braun"
+        android:fontFamily="@font/cookierun_regular"
+        android:layout_marginBottom="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recv_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <RelativeLayout
+        android:id="@+id/rel_noResult"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_noResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_gray"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색 결과가 없습니다."
+            android:layout_below="@+id/iv_noResult"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/font_braun"
+            android:fontFamily="@font/cookierun_regular"
+            android:layout_marginTop="5dp"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
