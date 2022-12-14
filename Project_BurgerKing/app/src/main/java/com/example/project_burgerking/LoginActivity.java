@@ -2,6 +2,7 @@ package com.example.project_burgerking;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -27,6 +28,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         b.ivClearId.setOnClickListener(this);
         b.ivClearPw.setOnClickListener(this);
 
+        // 뒤로가기
+        b.ivBack.setOnClickListener(this);
+
     }//
 
     // 클릭 이벤트
@@ -39,6 +43,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }else if(v.getId() == R.id.iv_clear_pw){
             //비밀번호 지우기
             b.edtPw.setText("");
+        }else if(v.getId() == R.id.iv_back){
+            //뒤로가기 : 메인액티비티
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
         }
 
     }
