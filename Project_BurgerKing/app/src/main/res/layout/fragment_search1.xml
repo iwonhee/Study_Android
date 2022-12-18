@@ -29,7 +29,7 @@
         android:textColor="@color/font_braun"
         android:layout_marginBottom="15dp"
         android:bufferType="spannable"
-        android:fontFamily="@font/cookierun_regular"
+        android:fontFamily="@font/bmj_ua"
         />
     <TextView
         android:id="@+id/tv_searchCnt"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:bufferType="spannable"
         android:textColor="@color/font_braun"
-        android:fontFamily="@font/cookierun_regular"
+        android:fontFamily="@font/bmj_ua"
         android:layout_marginBottom="10dp"
         />
 
@@ -67,7 +67,7 @@
             android:layout_below="@+id/iv_noResult"
             android:layout_centerHorizontal="true"
             android:textColor="@color/font_braun"
-            android:fontFamily="@font/cookierun_regular"
+            android:fontFamily="@font/bmj_ua"
             android:layout_marginTop="5dp"
             />
 

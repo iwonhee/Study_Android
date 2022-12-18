@@ -28,6 +28,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         b.ivClearId.setOnClickListener(this);
         b.ivClearPw.setOnClickListener(this);
 
+        // 체크박스 리니어 클릭
+        b.linCheckBox1.setOnClickListener(this);
+        b.linCheckBox2.setOnClickListener(this);
+
         // 뒤로가기
         b.ivBack.setOnClickListener(this);
 
@@ -40,25 +44,37 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(v.getId() == R.id.iv_clear_id){
             //아이디 지우기
             b.edtId.setText("");
+
         }else if(v.getId() == R.id.iv_clear_pw){
             //비밀번호 지우기
             b.edtPw.setText("");
+
         }else if(v.getId() == R.id.iv_back){
             //뒤로가기 : 메인액티비티
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
+
+        }else if(v.getId() == R.id.lin_check_box1){
+            //체크박스 ( 아이디 저장 )
+            if(b.cbSaveId.isChecked()) b.cbSaveId.setChecked(false);
+            else b.cbSaveId.setChecked(true);
+
+        }else if(v.getId() == R.id.lin_check_box2){
+            //체크박스 ( 자동 로그인 )
+            if(b.cbAutoLogin.isChecked()) b.cbAutoLogin.setChecked(false);
+            else b.cbAutoLogin.setChecked(true);
+
         }
 
     }
 
-    // TextWatcher 재사용
+    // TextWatcher
     public TextWatcher getTextWatcher(ImageView close){
         TextWatcher tw = new TextWatcher(){
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 //입력 전
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 //입력칸 변화시
@@ -70,7 +86,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     close.setVisibility(View.VISIBLE);
                 }
             }
-
             @Override
             public void afterTextChanged(Editable s) {
                 //입력 끝난 후

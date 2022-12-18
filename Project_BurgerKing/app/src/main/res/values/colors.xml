@@ -19,4 +19,6 @@
     <color name="font_unselected">#9E8070</color>
     <color name="font_gray">#888</color>
     <color name="line_gray">#ccc</color>
+    <color name="border">#80CFC9C0</color>
+
 </resources>

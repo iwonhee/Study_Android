@@ -4,4 +4,6 @@
     <font android:font="@font/cookierun_regular"/>
     <font android:font="@font/cookierun_bold"/>
     <font android:font="@font/cookierun_black"/>
+    <font android:font="@font/bmj_ua"/>
+    <font android:font="@font/ariduri"/>
 </font-family>

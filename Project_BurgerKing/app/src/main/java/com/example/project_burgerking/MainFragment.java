@@ -23,7 +23,7 @@ import com.example.project_burgerking.membership.MemberActivity;
 
 import java.util.ArrayList;
 
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements View.OnClickListener{
     FragmentMainBinding b;
 
     @Override
@@ -32,6 +32,8 @@ public class MainFragment extends Fragment {
         b = FragmentMainBinding.inflate(inflater);
 
         Context context = container.getContext();
+
+        b.ivSlide.setOnClickListener(this);
 
         // 멤버십화면
         b.ivMembership.setOnClickListener(new View.OnClickListener() {
@@ -82,5 +84,17 @@ public class MainFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         b = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if(v.getId() == R.id.iv_slide){
+            // slideActivity 로 이동
+            Intent intent = new Intent(getContext(), SlideActivity.class);
+            startActivity(intent);
+            getActivity().overridePendingTransition(R.anim.slide_in, R.anim.none);
+        }
+
     }
 }
