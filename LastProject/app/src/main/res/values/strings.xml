@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LastProject</string>
+    <string name="login_text">Login to Access your \n bookmarks and personal preferences.</string>
+</resources>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DeliveryActivity"
+    android:background="@color/bg_light"
+    android:orientation="vertical">
+
+    <!-- 상단 메뉴 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="딜리버리 메뉴"
+            android:textColor="@color/font_braun"
+            android:textSize="22dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/one_mobile"
+            />
+        <ImageView
+            android:id="@+id/iv_basket"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="3dp"
+            android:src="@drawable/home_basket"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <!-- 배송지 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        android:background="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/location_pointer"
+                android:layout_marginRight="5dp"
+                />
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="광주광역시 어쩌고저쩌고"
+                    android:textColor="@color/font_braun"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="광주광역시 어쩌고저쩌고"
+                    android:textColor="@color/font_braun"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최소주문금액 : 13,000원/ 배달팁 : 0원"
+                    android:textSize="12dp"
+                    android:textColor="@color/font_braun"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 메뉴 카테고리 -->
+    <!-- TAB -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <!-- tab1 : 스페셜 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_special"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
+                android:text="@string/special"
+                android:textAlignment="center"
+                android:textColor="@color/icon_red"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/v_special"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/icon_red"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab2 : 신제품 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
+                android:text="신제품(NEW)"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/v_new"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab3 : 프리미엄 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
+                android:text="프리미엄"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/v_premium"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab4 : 와퍼주니어 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_whopper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
+                android:text="프리미엄"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/v_whopper"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- TAB2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+        <!-- tab4 : 치킨 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv_chicken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
+                android:text="치킨&amp;슈림프"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/v_chicken"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#888"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab5 : 사이드 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_side"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
+                android:text="사이드"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/v_side"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab6 : 음료 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_drink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
+                android:text="음료&amp;디저트"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/v_drink"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <!-- tab8 : 독퍼 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_dog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/one_mobile"
+                android:text="독퍼"
+                android:textAlignment="center"
+                android:textColor="#888"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/v_dog"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -87,6 +87,7 @@ public class SlideActivity extends AppCompatActivity implements View.OnClickList
         }else if(v.getId() == R.id.lin_customer){
             toggleDetail(b.linSub4, b.ivDown4);
         }else if(v.getId() == R.id.iv_close){
+            // MainActivity 로 이동 : 애니메이션 slide
             Intent intent = new Intent(SlideActivity.this, MainActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_out, R.anim.none);
