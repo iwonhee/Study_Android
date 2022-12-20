@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // 킹오더 클릭
         b.cardKingOrder.setOnClickListener(this);
+        // 딜리버리 클릭
+        b.cardDelivery.setOnClickListener(this);
 
         // 홈 클릭시
         b.linBtmItem1.setOnClickListener(this);
@@ -88,6 +90,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(v.getId() == R.id.card_kingOrder){
             // 킹오더 클릭
             Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+            startActivity(intent);
+        }else if(v.getId() == R.id.card_delivery){
+            // 딜리버리 클릭
+            Intent intent = new Intent(MainActivity.this, DeliveryActivity.class);
             startActivity(intent);
         }else if(v.getId() == R.id.iv_nav_close){
             // close 클릭
