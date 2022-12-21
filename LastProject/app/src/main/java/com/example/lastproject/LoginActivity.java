@@ -1,5 +1,6 @@
 package com.example.lastproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -19,6 +20,11 @@ import com.kakao.sdk.auth.model.Prompt;
 import com.kakao.sdk.common.KakaoSdk;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.User;
+import com.navercorp.nid.NaverIdLoginSDK;
+import com.navercorp.nid.oauth.NidOAuthLogin;
+import com.navercorp.nid.oauth.OAuthLoginCallback;
+import com.navercorp.nid.profile.NidProfileCallback;
+import com.navercorp.nid.profile.data.NidProfileResponse;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -29,7 +35,7 @@ import kotlin.jvm.functions.Function2;
 
 public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding b;
-    private final String TAG = "log";
+    private final String TAG = "logd";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +45,43 @@ public class LoginActivity extends AppCompatActivity {
         ApiClient.setBASEURL("http://192.168.0.115/middle/");
         //초기화(네이티브 키)
         KakaoSdk.init(this, "d81ef1951c67b3de710220c4425d8aeb");
+        NaverIdLoginSDK.INSTANCE.initialize(this, "q713C8rnA3eeJpK9yEsf", "VlbbENE90q", "LastProject");
 
+        // 카카오 로그인
+        b.buttonOAuthLoginImg.setOAuthLogin(new OAuthLoginCallback() {
+            @Override
+            public void onSuccess() {
+                Log.d(TAG, "onSuccess: ");
+                new NidOAuthLogin().callProfileApi(new NidProfileCallback<NidProfileResponse>() {
+                    @Override
+                    public void onSuccess(NidProfileResponse nidProfileResponse) {
+                        Log.d(TAG, "onSuccess: " + nidProfileResponse.getProfile().getEmail());
+                    }
+
+                    @Override
+                    public void onFailure(int i, @NonNull String s) {
+
+                    }
+
+                    @Override
+                    public void onError(int i, @NonNull String s) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void onFailure(int i, @NonNull String s) {
+                Log.d(TAG, "onFailure: ");
+            }
+
+            @Override
+            public void onError(int i, @NonNull String s) {
+                Log.d(TAG, i + "onError: "+s);
+            }
+        });
+
+        // 일반 로그인 버튼
         b.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,18 +103,9 @@ public class LoginActivity extends AppCompatActivity {
                 kakaoLogin();
             }
         });
-        // OAuthToken(accessToken=DyNV1QOwMvI4WUzvGKBf4ky7X3OuQPX7ELeNkAo7Cj11GgAAAYUuUn5V
-        // , accessTokenExpiresAt=Wed Dec 21 03:57:15 GMT+09:00 2022
-        // , refreshToken=mNbDx6lwDK-gTml1orxbM_4nu8Jm_65BCzIHuE_UCj11GgAAAYUuUn5U
-        // , refreshTokenExpiresAt=Sat Feb 18 15:57:15 GMT+09:00 2023
-        // , idToken=null
-        // , scopes=[account_email
-        // , profile_image
-        // , gender
-        // , profile_nickname])
         getHashKey();
 
-    }
+    }// onCreate()
 
     //  VEnQQSCqQmKL0uHmxSK1Y/hRy5g=
     private void getHashKey(){

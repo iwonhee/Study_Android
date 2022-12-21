@@ -12,11 +12,12 @@ import android.widget.TextView;
 
 import com.example.project_burgerking.MainActivity;
 import com.example.project_burgerking.R;
+import com.example.project_burgerking.databinding.ActivityMemberBinding;
 
 public class MemberActivity extends AppCompatActivity{
     ImageView iv_member_rank_detail, iv_member_back;
     CardView card_member_welcome, card_member_junior, card_member_whopper, card_member_king;
-    TextView tv_select_welcome, tv_select_junior, tv_select_whopper, tv_select_king;
+    TextView tv_select_welcome, tv_select_junior, tv_select_whopper, tv_select_king, tv_coupon_more;
     View v_rank_welcome, v_rank_junior, v_rank_whopper, v_rank_king;
 
     @Override
@@ -34,6 +35,7 @@ public class MemberActivity extends AppCompatActivity{
         tv_select_junior = findViewById(R.id.tv_select_junior);
         tv_select_whopper = findViewById(R.id.tv_select_whopper);
         tv_select_king = findViewById(R.id.tv_select_king);
+        tv_coupon_more = findViewById(R.id.tv_coupon_more);
 
         v_rank_welcome = findViewById(R.id.v_rank_welcome);
         v_rank_junior = findViewById(R.id.v_rank_junior);
@@ -89,6 +91,14 @@ public class MemberActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(MemberActivity.this, MainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        // 더 많은 쿠폰 보기 (클릭)
+        tv_coupon_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
