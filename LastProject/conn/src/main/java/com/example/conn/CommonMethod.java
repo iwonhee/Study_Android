@@ -9,7 +9,7 @@ import retrofit2.Response;
 public class CommonMethod {
     private HashMap<String, Object> params = new HashMap<>();
 
-    public CommonMethod setParams(String key, String value){
+    public CommonMethod setParams(String key, Object value){
         params.put(key, value);
         return this;
     }
