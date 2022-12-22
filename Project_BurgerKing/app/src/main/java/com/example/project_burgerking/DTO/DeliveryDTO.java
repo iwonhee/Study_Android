@@ -29,7 +29,7 @@ public class DeliveryDTO {
 
     public void setInt_price(int int_price){this.int_price = int_price;}
 
-    public int getInt_price(int int_price){return int_price;}
+    public int getInt_price(){return int_price;}
 
     public int getImg() {
         return img;

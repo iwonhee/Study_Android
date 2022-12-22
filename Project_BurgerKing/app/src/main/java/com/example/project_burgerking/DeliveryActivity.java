@@ -38,6 +38,9 @@ public class DeliveryActivity extends AppCompatActivity implements View.OnClickL
         b.relDrink.setOnClickListener(this);
         b.relDog.setOnClickListener(this);
 
+        //장바구니 클릭
+        b.ivBasket.setOnClickListener(this);
+
         //스페셜&할인팩 list
         ArrayList<DeliveryDTO> special_list = new ArrayList<>();
         special_list.add(new DeliveryDTO(R.drawable.burger_bup1, "블랙어니언팩1", parsePrice(23700)));
@@ -165,6 +168,10 @@ public class DeliveryActivity extends AppCompatActivity implements View.OnClickL
             //독푸드 선택
             setAdapter(dog_list);
             selectTab(b.tvDog, b.vDog, texts, views);
+        }else if(v.getId() == R.id.iv_basket){
+            //CartActivity 이동
+            Intent intent = new Intent(DeliveryActivity.this, CartActivity.class);
+            startActivity(intent);
         }
 
     }
@@ -172,7 +179,6 @@ public class DeliveryActivity extends AppCompatActivity implements View.OnClickL
     // 가격 (int -> String)
     public String parsePrice(int price){
         DecimalFormat df = new DecimalFormat("###,###");
-
         return df.format(price)+"원";
     }
 

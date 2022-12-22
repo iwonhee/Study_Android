@@ -35,30 +35,15 @@ public class MainFragment extends Fragment implements View.OnClickListener{
 
         b.ivSlide.setOnClickListener(this);
 
+        b.relBasket.setOnClickListener(this);
+
         // 멤버십화면
-        b.ivMembership.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, MemberActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        b.ivLogo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        b.ivMembership.setOnClickListener(this);
 
         // 킹오더 클릭
-        b.cardKingOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, OrderActivity.class);
-                startActivity(intent);
-            }
-        });
+        b.cardKingOrder.setOnClickListener(this);
+        // 딜리버리 클릭
+        b.cardDelivery.setOnClickListener(this);
 
         //뷰페이저 이미지 List
         ArrayList<Integer> slideList = new ArrayList<>();
@@ -94,6 +79,22 @@ public class MainFragment extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getContext(), SlideActivity.class);
             startActivity(intent);
             getActivity().overridePendingTransition(R.anim.slide_in, R.anim.none);
+        }else if(v.getId() == R.id.rel_basket){
+            // CartActivity 이동
+            Intent intent = new Intent(getContext(), CartActivity.class);
+            startActivity(intent);
+        }else if(v.getId() == R.id.card_delivery){
+            // DeliveryActivity 이동
+            Intent intent = new Intent(getContext(), DeliveryActivity.class);
+            startActivity(intent);
+        }else if(v.getId() == R.id.card_kingOrder){
+            // OrderActivity 이동
+            Intent intent = new Intent(getContext(), OrderActivity.class);
+            startActivity(intent);
+        }else if(v.getId() == R.id.iv_membership){
+            // MemberActivity 이동
+            Intent intent = new Intent(getContext(), MemberActivity.class);
+            startActivity(intent);
         }
 
     }
