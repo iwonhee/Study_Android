@@ -91,7 +91,6 @@
                             android:background="@drawable/edittext_login"
                             android:hint="아이디(이메일)"
                             android:paddingLeft="10dp"
-                            android:fontFamily="@font/bmj_ua"
                             android:textColor="@color/font_braun"
                             />
                         <ImageView
@@ -121,7 +120,6 @@
                             android:background="@drawable/edittext_login"
                             android:hint="비밀번호"
                             android:paddingLeft="10dp"
-                            android:fontFamily="@font/bmj_ua"
                             android:textColor="@color/font_braun"
                             />
                         <ImageView
