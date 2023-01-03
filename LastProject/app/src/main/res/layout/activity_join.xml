@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".member.JoinActivity"
+    android:orientation="vertical"
+    >
+
+    <!-- 이미지뷰 클릭시 갤러리 또는 카메라로 이미지 선택하게 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/iv_profile"
+        android:src="@drawable/ic_launcher_foreground"
+        android:background="#123"
+        android:layout_marginBottom="20dp"
+        />
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:hint="이메일 입력"
+        />
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:hint="비밀번호 입력"
+        />
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:hint="이름 입력"
+        />
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rdo_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/rdo_woman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="여"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="회원가입"
+        android:backgroundTint="#1C2B3A"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="취소"
+        android:backgroundTint="#DAA4C4"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.lastproject;
+package com.example.lastproject.member;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -104,6 +104,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         getHashKey();
+
+        //회원가입
+        b.btnJoin.setOnClickListener(v -> {
+            Intent intent = new Intent(this, JoinActivity.class);
+            startActivity(intent);
+        });
 
     }// onCreate()
 
